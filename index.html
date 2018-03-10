@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aula 2</title>
+  </head>
+  <body>
+    <script>
+      var nome = "Felipe Medeiros Volpato";
+      var idade = 20;
+      var sexoF = false;
+      var peso = 67.12;
+
+      alert ('Olá, seu nome é: ' + nome + ', você tem: ' + idade + ' anos.')
+
+      if (idade <= 18) {
+        alert ('Novinho!!')
+      }
+      else if (idade <= 30)  {
+        alert ('Tiozinho!!')
+      }
+      else {
+        alert ('Tiozão!!')
+      }
+
+      var data = new Date().getDay();
+
+      switch (data) {
+        case 0:
+          console.log('Hoje é Domingo!');
+          break;
+        case 1:
+          console.log('Hoje é Segunda-Feira!');
+          break;
+        case 2:
+          console.log('Hoje é Terça-Feira!');
+          break;
+        case 3:
+          console.log('Hoje é Quarta-Feira!');
+          break;
+        case 4:
+          console.log('Hoje é Quinta-Feira!');
+          break;
+        case 5:
+          console.log('Hoje é Sexta-Feira!');
+          break;
+        case 6:
+          console.log('Hoje é Sábado!!!!');
+          break;
+      }
+
+      function converterDecimalParaRomano(a) {
+        switch (a) {
+          case 1:
+            return 'I';
+          case 2:
+            return 'II';
+          case 3:
+            return 'III';
+          case 4:
+            return 'IV';
+          case 5:
+            return 'V';
+          case 6:
+            return 'VI';
+          case 7:
+            return 'VII';
+          case 8:
+            return 'VIII';
+          case 9:
+            return 'IX';
+          case 10:
+            return 'X';
+          default:
+            return 'Número inválido!';
+        }
+      }
+      var decimal = prompt ('Digite um número de 1 a 10');
+      decimal = parseInt(decimal)
+      alert(converterDecimalParaRomano(decimal));
+
+      for (var i = 0 ; i <= 10 ; i++) {
+        converterDecimalParaRomano(i);
+        console.log(converterDecimalParaRomano(i));
+      }
+
+      var contador = 10
+      while (contador >= 1) {
+        console.log(converterDecimalParaRomano(contador));
+        contador--;
+      }
+
+      var mArray = [];
+      var nome = 'Felipe';
+      mArray.push(nome);
+      var endereco = [];
+      var cep = '55550-666';
+      endereco.push(cep);
+      var numero = '3325';
+      endereco.push(numero);
+      var complemento = 'à 7 palmos da terra';
+      endereco.push(complemento);
+      var bairro = 'Cemitério';
+      endereco.push(bairro);
+      var cidade = 'Catacombs';
+      endereco.push(cidade);
+      var estado = 'Óbito';
+      endereco.push(estado);
+      mArray.push(endereco);
+      var telefone = '555-0135';
+      mArray.push(telefone);
+      mArray [0] = 'Felipe Medeiros Volpato';
+      mArray.splice (2,1);
+      console.log(mArray);
+
+      var meuObjeto = {
+        nome: "Felipe",
+        sobreNome: "Medeiros",
+        endereco: {
+          rua: "Road to nowhere",
+          numero: "1742",
+          complemento: "Above",
+          bairro: "Desertification",
+          cidade: "No Replacement",
+          estado: "Êxtase",
+        },
+        mInformacoes: function () {
+          return "Nome completo: " + this.nome + " " + this.sobreNome + " Endereço: " + this.endereco.rua;
+        }
+      }
+      alert(meuObjeto.mInformacoes());
+
+
+    </script>
+  </body>
+<html>
